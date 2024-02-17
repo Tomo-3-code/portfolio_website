@@ -1,0 +1,486 @@
+@charset "utf-8";
+
+
+.contents {
+  /*background-color: gray (206, 206, 206);*/
+  background-color:white;
+  margin: auto;
+}
+/*.body {
+    background-color:wheat;
+    
+}*/
+
+/*▼icon挿入▼ */
+.js-fade {
+  width: 100%;
+  margin: 30px 0 0;
+  text-align: center;
+  height: auto;
+  display: none;
+} 
+
+/* ▲icon挿入▲ */
+
+
+/* ▼リスト作成▼ */
+
+
+nav {
+  width: 100%;
+  height: 70px;
+  /*background-color: #0dcea74f;*/
+  background-color: #0dce613d;
+  padding-top: 5px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+}
+ul {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+li {
+  list-style: none;
+  font-size: 20px;
+  margin: 15px 0 5px 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin-right: 35px;
+  
+}
+
+
+a:hover {
+  /*color: rgb(214, 237, 248);*/
+  color: #7d4f13;
+}
+
+/* ▲リスト作成▲ */
+
+
+
+/* ▼項目説明(ごあいさつ)▼ */
+
+
+.font0 {
+  text-align: center;
+  margin:  200px 10px 0 0;
+
+}
+*,body,ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* ↓ スライドの外枠 */
+.slide-wrapper {
+  width: 50%;
+  height: 300px;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden; /* はみ出したスライドを隠す */
+  z-index: 20;
+}
+
+/*  ↓ スライド（コンテンツ） */
+.slide { /*スライド全体 */
+  width: 300%;
+  height: 100%;
+  display: flex;
+  transition: all 0.3s;
+
+}
+
+.slide div { /* スライド */
+  width: 33.33%;
+  height: 100%;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.slide1 { /* スライドさせるために必要なクラス */
+  transform: translateX(0);
+}
+.slide2 { /* スライドさせるために必要なクラス */
+  transform: translateX(-33.33%);
+}
+.slide3 { /* スライドさせるために必要なクラス */
+  transform: translateX(-66.66%);
+}
+.slide div:nth-of-type(1){ /* 背景色 */
+  background-color: #0dcea77e;
+  
+}
+.slide div:nth-of-type(2){ /* 背景色 */
+  background-color: #0dcea77e;
+  
+}
+.slide div:nth-of-type(3){ /* 背景色 */
+  background-color: #0dcea77e;
+  
+}
+
+/* ↓ 左右のボタン */
+.next {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 10px;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px #000;
+  border-right: solid 3px #000;
+  -webkit-transform: rotate(45deg) translateY(50%);
+  transform: rotate(45deg) translateY(50%);
+}
+.prev {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 25px;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px #000;
+  border-right: solid 3px #000;
+  -webkit-transform: rotate(-135deg) translateY(-50%);
+  transform: rotate(-135deg) translateY(-50%);
+}
+
+/* ↓ インジケーター */
+.indicator {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  column-gap: 18px;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+.indicator li {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  list-style: none;
+  background-color: #fff;
+  border: 2px #000 solid;
+  cursor: pointer;
+}
+.indicator li:first-of-type {
+  background-color: #000;
+}
+/*▲項目説明(ごあいさつ)▲*/
+
+
+/*▼項目説明(自己紹介）プロフィール/経歴)▼*/
+
+/* 横並び */
+
+.flex0 {
+
+  display: flex; /*横並び*/
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 1s,visibility 1s, transform 1s;
+}
+
+
+
+.scroll {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+.flex0 .image {
+  width: 640px; /*画像サイズ指定*/
+  margin: 100px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  
+}
+.flex0 .right {
+  margin: 100px 0 0 20px;
+  padding: 0;
+}
+.flex0 .title {
+  margin: 100px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+.flex0 .text {
+  margin: 100px 0 0;
+  padding: 0;
+}
+
+/* ▲項目説明(自己紹介）プロフィール/経歴)▲ */
+
+/* ▼項目説明(お問い合わせ)▼ */
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color:#aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: #bbb5af;
+  
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+  
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color:#bbb5af;
+  
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+  
+}
+
+input:focus::placeholder, textarea::focus:placeholder {
+  color: #bbb5af;
+  
+}
+
+input::-ms-placeholder, textarea::-ms-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+  
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+  color: #bbb5af;
+  
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+  color: #cbc6c1;
+}
+
+/*body {*/
+/* font-family: /*'Lato', sans-serif;*/
+/* background: /*#e2dedb;*/
+  /*color: /*#b3aca7;*/
+/*}*/
+
+header {
+  position: relative;
+  margin: 100px 0 25px 0;
+  font-size: 2.3em;
+  text-align: center;
+  letter-spacing: 7px;
+  z-index: 5;
+}
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  background: transparent;
+  outline: none;
+  color: #726659;
+  
+  border: solid 1px #b3aca7;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  
+  background: transparent;
+  outline: none;
+  
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 1px #b3aca7;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+#submit {
+  width: 502px;
+  
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #b3aca7;
+  
+  outline:none;
+  cursor: pointer;
+  
+  border: solid 1px #b3aca7;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #e2dedb;
+}
+/* ▲項目説明(お問い合わせ)▲*/
+
+                                
+
+
+
+/*▼hover（クリック時、一番上に移動）▼*/
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 14px;
+  line-height: 1;
+  z-index: 99;
+}
+
+#page-top a {
+  background: #0dcea7a9;
+  text-decoration: none;
+  color: #fff;
+  width: 60px;
+  margin: 0 0 10px 0;
+  padding: 28px 5px;
+  text-align: center;
+  display: block;
+  border-radius: 90px;
+  opacity: 0.9;
+  transition: all .3s ease;
+}
+#page-top a:hover {
+  text-decoration: none;
+  opacity: .5;
+}
+
+/*▲hover（クリック時、一番上に移動）▲*/
+
+/* ▼マウスポインター(クリック時水滴表示)▼ */
+
+/*背景色は設定しない*/
+.sizuku {
+  animation: sizuku 1s linear 0s; /*1s はアニメーションにかかる時間*/
+  /*background-color: #6EB2E0; *//*背景色*/
+  border-radius: 50%;
+  border: 4px solid #6EB2E0; /*ボーダーの幅と色*/
+  position: absolute;
+  z-index: 1000;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  /*background-color: #0dcea74f;*/
+  background-color: #0dce613d;
+}
+
+.footer small {
+  margin: 10px;
+}
+
+@keyframes sizuku {
+  0% {
+      height: 0; 
+      opacity: 1;
+      transform: translate(0, 0);
+      width: 0;
+  }
+  100% {
+      height: 500px; /*円の高さ幅の最大値*/
+      opacity: 0;
+      transform: translate(-250px, -250px); /*高さの半分の値にする*/
+      width: 500px; /*基本高さと合わせる*/
+  }
+}
+/* ▲マウスポインター(クリック時水滴表示)▲ */
