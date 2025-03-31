@@ -233,6 +233,7 @@ li {
 
 /*▼DEMOビデオ▼*/
 .videoDEMO {
+   width: 100%;
   text-align: center;
   
 } 
