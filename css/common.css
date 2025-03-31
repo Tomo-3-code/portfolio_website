@@ -231,6 +231,16 @@ li {
   padding: 0;
 }
 
+/*▼DEMOビデオ▼*/
+.videoDEMO {
+  width: 100%;
+  margin: 30px 0 0;
+  text-align: center;
+  height: auto;
+} 
+
+
+
 /* ▲項目説明(自己紹介）プロフィール/経歴)▲ */
 
 
