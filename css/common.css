@@ -232,10 +232,12 @@ li {
 }
 
 /*▼DEMOビデオ▼*/
- videoDEMO {
+ .videoDEMO {
    width: 100%;
+  margin: 30px 0 0;
   text-align: center;
-  
+  height: auto;
+
 } 
 
 
