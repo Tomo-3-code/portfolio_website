@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
         // 楽天APIから書籍情報を取得して発売日を表示
         new Thread(() -> {
             try {
-                String apiUrl = "https://app.rakuten.co.jp/services/api/BooksBook/Search/20170404?applicationId=1035945938062560415&title=" + bookTitle;
+                String apiUrl = "https://app.rakuten.co.jp/services/api/BooksBook/Search/20170404?applicationId=&title=" + bookTitle;
                 URL url = new URL(apiUrl);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
